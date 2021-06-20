@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="main">	
+		<h2>Please register in this site for join the turnoment of Free Fire</h2>
+		<form>
+			<label for="login" id="l_1">Login</label>
+			<input type="text" id="login" name="login" placeholder="Please Enter your login">
+			<label for="pswrd" id="l_2">Password</label>
+			<input type="password" id="pswrd" name="pswrd" placeholder="Please Enter your password">
+			<p id="btn"> Join us</p>
+		</div>
+		<div id="mainDiv"></div>
+		<div id="btn_main"></div>
+		</form>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+		}
+		body{
+			background-image: url(https://c4.wallpaperflare.com/wallpaper/521/153/310/video-game-garena-fire-wallpaper-preview.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		form{
+			position: relative;
+			background-color: grey;
+			width: 300px;
+			height: 270px;
+			margin: 150px auto;
+		}
+		label{
+			font-family: sans-serif;
+			position: absolute;
+			
+		}
+		input{
+			position: absolute;
+			margin: 15px auto;
+			width: 250px;
+			height: 50px;
+			border: 1px solid black;
+			border-radius: 25px;
+			color: black;
+		}
+		#login{
+			top: 50px;
+			left: 15px;
+		}
+		#pswrd{
+			top: 130px;
+			left: 15px;
+		}
+		#l_1{
+			top: 45px;
+			left: 25px;
+		}
+		#l_2{
+			top: 125px;
+			left: 25px;
+		}
+		#btn{
+			padding: 5px;
+			margin: 5px;
+			position: absolute;
+			width: 100px;
+			height: 30px;
+			border-radius: 25px;
+			background-color: red;
+			bottom: 15px;
+			right: 25px;
+		}
+		input:hover {
+			width: 270px;
+			transition: 0.2s;
+		}
+		#btn:hover{
+			cursor: pointer;
+		}
+		h2{
+			font-family: sans-serif;
+			top: 100px;
+			position: relative;
+			left:  320px;
+
+		}
+		#mainDiv{
+			position: absolute;
+			width: 150px;
+			height: 150px;
+			background-color: yellow;
+			top: -250px;
+		}
+		#btn_main{
+			top: 0;
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			background-color: none;
+		}
+	</style>
+	<script>
+		const btnMain = document.getElementById("btn_main")
+		const mainDiv = document.getElementById("mainDiv")
+		const login = document.getElementById('login');
+		const pswrd = document.getElementById('pswrd');
+		const btn = document.getElementById("btn");
+		btn.addEventListener("click",function(){
+			let p1 = document.createElement("p")
+			let p2 = document.createElement("p")
+			mainDiv.appendChild(p1);
+			mainDiv.appendChild(p2);
+			p1.innerText = "login: " + login.value;
+			p2.innerText = "password: " + pswrd.value;
+		})
+		btnMain.addEventListener("click",function(){
+			mainDiv.style.top = "350px"
+			mainDiv.style.transition = "2s"
+		})
+	</script>
+</body>
+</html>
